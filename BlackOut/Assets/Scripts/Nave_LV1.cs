@@ -4,40 +4,22 @@ using UnityEngine;
 
 public class Nave_LV1 : MonoBehaviour
 {
-    public int health = 100; //Pontos de vida
-    GameObject Torre;
+    Vector3[] path;
+    public List<int[]> array;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CheckTowerClose", 0f, 1f);        
+        //Transform myTransform = transform;
+        for(int i=0; i < array.Count; i++)
+            this.path[i] = new Vector3(array[i][0], 1,array[i][1]);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Torre != null && Torre.GetComponent<Torre_LV1>().target == this)
-        {
-            InvokeRepeating("LowerHealth", 0f, 1f);
-        }
-    }
-
-    void CheckTowerClose()
-    {
-        Torre = GameObject.FindGameObjectWithTag("Torre");
-    }
-
-    void LowerHealth()
-    {
-        
-        if (health >= 0)
-        {
-            health -= 10;
-        }
-
-        if (health < 0)
-        {
-            Destroy(gameObject);
+        for(int i = 0; i < array.Count; ++i){
+            transform.position = path[i] * Time.deltaTime;
         }
     }
 }
