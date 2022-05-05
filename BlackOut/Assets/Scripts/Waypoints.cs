@@ -3,6 +3,7 @@ using UnityEngine;
 public class Waypoints : MonoBehaviour {
 
 	public static Transform[] points;
+	public static Vector3[] walker;
   
   private static List<int[]> AStar(List<string> map)
   {
@@ -94,34 +95,46 @@ public class Waypoints : MonoBehaviour {
       return new List<int[]>();
   }
   
-  private static List<Tile> GetWalkableTiles(List<string> map, Tile currentTile, Tile targetTile)
-  {
-      var possibleTiles = new List<Tile>()
-      {
-          new Tile { X = currentTile.X, Y = currentTile.Y - 1, Parent = currentTile, Cost = currentTile.Cost + 1 },
-          new Tile { X = currentTile.X, Y = currentTile.Y + 1, Parent = currentTile, Cost = currentTile.Cost + 1},
-          new Tile { X = currentTile.X - 1, Y = currentTile.Y, Parent = currentTile, Cost = currentTile.Cost + 1 },
-          new Tile { X = currentTile.X + 1, Y = currentTile.Y, Parent = currentTile, Cost = currentTile.Cost + 1 },
-      };
+	private static List<Tile> GetWalkableTiles(List<string> map, Tile currentTile, Tile targetTile)
+	{
+		var possibleTiles = new List<Tile>()
+		{
+		  new Tile { X = currentTile.X, Y = currentTile.Y - 1, Parent = currentTile, Cost = currentTile.Cost + 1 },
+		  new Tile { X = currentTile.X, Y = currentTile.Y + 1, Parent = currentTile, Cost = currentTile.Cost + 1},
+		  new Tile { X = currentTile.X - 1, Y = currentTile.Y, Parent = currentTile, Cost = currentTile.Cost + 1 },
+		  new Tile { X = currentTile.X + 1, Y = currentTile.Y, Parent = currentTile, Cost = currentTile.Cost + 1 },
+		};
 
-      possibleTiles.ForEach(tile => tile.SetDistance(targetTile.X, targetTile.Y));
+		possibleTiles.ForEach(tile => tile.SetDistance(targetTile.X, targetTile.Y));
 
-      var maxX = map.First().Length - 1;
-      var maxY = map.Count - 1;
+		var maxX = map.First().Length - 1;
+		var maxY = map.Count - 1;
 
-      return possibleTiles
-              .Where(tile => tile.X >= 0 && tile.X <= maxX)
-              .Where(tile => tile.Y >= 0 && tile.Y <= maxY)
-              .Where(tile => map[tile.Y][tile.X] == ' ' || map[tile.Y][tile.X] == 'B' || map[tile.Y][tile.X] == '.')
-              .ToList();
-  }
+		return possibleTiles
+		      .Where(tile => tile.X >= 0 && tile.X <= maxX)
+		      .Where(tile => tile.Y >= 0 && tile.Y <= maxY)
+		      .Where(tile => map[tile.Y][tile.X] == ' ' || map[tile.Y][tile.X] == 'B' || map[tile.Y][tile.X] == '.')
+		      .ToList();
+	}
 
 	void Awake ()
-	{
-		points = new Transform[transform.childCount];
-		for (int i = 0; i < points.Length; i++)
 		{
-			points[i] = transform.GetChild(i);
+		List<string> map = new List<string>
+		{
+		    "    #.   ",
+		    "A   # .  ",
+		    ".        ",
+		    ".. #B    ",
+		    "    #    ",
+		    "      .  ",
+		    "    # .  "
+		};
+		List<int[]> path = AStar(map);
+		walker = new Vector3[path.Count];
+
+		for(int i=0;i < path.Count; i++)
+		{
+			walker[i] = new Vector3(path[i][0],1,path[i][1]);
 		}
 	}
 
