@@ -15,22 +15,26 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         Walker walker = new Walker();
+        //# = torre
+        //. = obstaculo (em vermelho no mapa no jogo)
+        //A = inicio
+        //B = fim
         List<string> map = new List<string>
 		{
 		    "    #.   ",
-		    "A   # .  ",
-		    ".        ",
-		    ".. #B    ",
-		    "    #    ",
-		    "      .  ",
-		    "    # .  "
+            "A   # .  ",
+            ".        ",
+            ".. #B    ",
+            "    #    ",
+            "      .  ",
+            "    # .  "
 		};
 		List<int[]> path = walker.AStar(map);
         tamanho = path.Count;
 		vector = new Vector3[path.Count];
 
 		for(int i=0;i < path.Count; i++)
-			vector[i] = new Vector3(path[i][0],1,path[i][1]);
+			vector[i] = new Vector3(path[i][0],-1.44f,path[i][1]);
 
         origem = vector[0];
         destino = vector[1];
@@ -43,7 +47,7 @@ public class EnemyScript : MonoBehaviour
     {
         float tempo = Time.time - inicio;
         float velocidade = (tempo/comprimento)*3;
-        this.transform.position = Vector3.Lerp(origem, destino, velocidade);
+        this.transform.position = Vector3.Lerp(origem, destino, velocidade); //caminha a cada update
 
         if(Vector3.Distance(this.transform.position, destino) <= 0) {
             i++;

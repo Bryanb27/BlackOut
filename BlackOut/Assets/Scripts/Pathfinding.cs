@@ -38,8 +38,8 @@ namespace Pathfinding
                     {
 
                         path.Insert(0, new int[2]);
-                        path[0][0] = tile.X;
-                        path[0][1] = tile.Y;
+                        path[0][0] = tile.X*2;
+                        path[0][1] = tile.Y*2;
                         //Console.WriteLine($"{tile.X} : {tile.Y}");
                         if (map[tile.Y][tile.X] == '.')
                         {
