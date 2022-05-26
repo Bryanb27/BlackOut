@@ -23,8 +23,8 @@ public class EnemyScript : MonoBehaviour
 		{
 		    "    #.   ",
             "A   # .  ",
-            ".        ",
-            ".. #B    ",
+            ".##      ",
+            "..  B    ",
             "    #    ",
             "      .  ",
             "    # .  "
