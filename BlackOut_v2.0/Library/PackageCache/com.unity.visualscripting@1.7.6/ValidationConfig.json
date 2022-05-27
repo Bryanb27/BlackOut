@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "FilenameValidation":
     {
@@ -22,3 +23,29 @@
         ]
     }
 }
+=======
+{
+    "FilenameValidation":
+    {
+        "Filenames":
+        [
+            {
+                "Filename": "Editor/VisualScripting.Flow/Framework/Control/Switch*Descriptor.cs",
+                "Targets": "+Switch"
+            },
+            {
+                "Filename": "Editor/VisualScripting.Flow/Framework/Control/Switch*Descriptor.cs.meta",
+                "Targets": "+Switch"
+            },
+            {
+                "Filename": "Runtime/VisualScripting.Flow/Framework/Control/Switch*.cs",
+                "Targets": "+Switch"
+            },
+            {
+                "Filename": "Runtime/VisualScripting.Flow/Framework/Control/Switch*.cs.meta",
+                "Targets": "+Switch"
+            }
+        ]
+    }
+}
+>>>>>>> d177c67f8fc2d304d2e7e6810126b61eeb7bdb3d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Collections;
 using System.Linq;
 using UnityEngine.TestTools.TestRunner;
@@ -15,4 +16,23 @@ namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks
             yield return null;
         }
     }
+=======
+using System.Collections;
+using System.Linq;
+using UnityEngine.TestTools.TestRunner;
+
+namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks
+{
+    internal class LegacyPlayerRunTask : TestTaskBase
+    {
+        public override IEnumerator Execute(TestJobData testJobData)
+        {
+            var executionSettings = testJobData.executionSettings;
+            var settings = PlaymodeTestsControllerSettings.CreateRunnerSettings(executionSettings.filters.Select(filter => filter.ToRuntimeTestRunnerFilter(executionSettings.runSynchronously)).ToArray());
+            var launcher = new PlayerLauncher(settings, executionSettings.targetPlatform, executionSettings.overloadTestRunSettings, executionSettings.playerHeartbeatTimeout, executionSettings.playerSavePath);
+            launcher.Run();
+            yield return null;
+        }
+    }
+>>>>>>> d177c67f8fc2d304d2e7e6810126b61eeb7bdb3d
 }

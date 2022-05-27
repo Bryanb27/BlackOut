@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "UnityEditor.TestRunner",
     "references": [
@@ -18,4 +19,26 @@
     ],
     "autoReferenced": false,
     "defineConstraints": []
+=======
+{
+    "name": "UnityEditor.TestRunner",
+    "references": [
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Mono.Cecil.dll",
+        "Mono.Cecil.Pdb.dll",
+        "Mono.Cecil.Mdb.dll",
+        "Mono.Cecil.Rocks.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": []
+>>>>>>> d177c67f8fc2d304d2e7e6810126b61eeb7bdb3d
 }

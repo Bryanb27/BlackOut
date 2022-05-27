@@ -2,7 +2,11 @@
 
 ## [3.0.14] - 2022-04-07
 
+<<<<<<< HEAD
 - Move Rider package persisted state to Library, to avoid vcs collisions or adding it specifically to gitignore
+=======
+- Move Rider package persisted state to Library, to avoid vcs collisions or adding it specifically to gitignore
+>>>>>>> d177c67f8fc2d304d2e7e6810126b61eeb7bdb3d
 
 
 

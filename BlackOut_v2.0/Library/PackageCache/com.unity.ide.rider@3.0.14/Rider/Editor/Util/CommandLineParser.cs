@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Collections.Generic;
 
 namespace Packages.Rider.Editor.Util
@@ -33,4 +34,41 @@ namespace Packages.Rider.Editor.Util
       }
     }
   }
+=======
+using System.Collections.Generic;
+
+namespace Packages.Rider.Editor.Util
+{
+  internal class CommandLineParser
+  {
+    public Dictionary<string, string> Options = new Dictionary<string, string>();
+    
+    public CommandLineParser(string[] args)
+    {
+      var i = 0;
+      while (i < args.Length)
+      {
+        var arg = args[i];
+        if (!arg.StartsWith("-"))
+        {
+          i++;
+          continue;
+        }
+
+        string value = null;
+        if (i + 1 < args.Length && !args[i + 1].StartsWith("-"))
+        {
+          value = args[i + 1];
+          i++;
+        }
+
+        if (!(Options.ContainsKey(arg)))
+        {
+          Options.Add(arg, value);
+        }
+        i++;
+      }
+    }
+  }
+>>>>>>> d177c67f8fc2d304d2e7e6810126b61eeb7bdb3d
 }
