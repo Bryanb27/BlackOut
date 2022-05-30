@@ -22,10 +22,10 @@ public class GridManager : MonoBehaviour
         {
             for(int z = 0; z*2 < _height*2; z++)
             {
-                var spawnedTile = Instantiate(_tilePrefab, new Vector3(x*2, 0 ,z*2), Quaternion.identity);
-                spawnedTile.name = $"Tile {x*2} {0} {z*2}";
+                var spawnedTile = Instantiate(_tilePrefab, new Vector3(x*2, -0.4f ,z*2), Quaternion.identity);
+                spawnedTile.name = $"Tile {x*2} {-0.4f} {z*2}";
 
-                _tiles[new Vector3(x * 2, 0, z * 2)] = spawnedTile;
+                _tiles[new Vector3(x * 2, -0.4f, z * 2)] = spawnedTile;
             }
         }
     }

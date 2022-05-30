@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1231.6981
     height: 614.0377
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 342}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 122
+  controlID: 83
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 680, y: 342}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 0
-  controlID: 121
+  controlID: 141
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 16
+  controlID: 142
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 17
+  controlID: 143
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,22 +393,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Renato\Desktop\this\BlackOut_v2.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 964b0000
-    m_LastClickedID: 19350
-    m_ExpandedIDs: 00000000524a0000964b0000
+    m_SelectedIDs: be4b0000
+    m_LastClickedID: 19390
+    m_ExpandedIDs: 00000000524a0000ac4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -436,7 +436,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000524a0000964b0000
+    m_ExpandedIDs: 00000000524a0000ac4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,7 +524,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 38.94342
+  m_LastVerticalScrollValue: 324.22644
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -557,8 +557,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 464a0000
-      m_LastClickedID: 19014
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 74fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -619,9 +619,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.896889, y: 7.1286573, z: 11.65108}
+    m_Target: {x: 11.573648, y: 10.215746, z: 4.321565}
     speed: 2
-    m_Value: {x: 5.896889, y: 7.1286573, z: 11.65108}
+    m_Value: {x: 11.573648, y: 10.215746, z: 4.321565}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -668,13 +668,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.02040136, y: 0.44696307, z: -0.010196231, w: 0.894266}
+    m_Target: {x: 0.39066878, y: -0.6076258, z: 0.45886812, w: 0.5173175}
     speed: 2
-    m_Value: {x: 0.02040128, y: 0.4469613, z: -0.010196191, w: 0.8942625}
+    m_Value: {x: 0.39066714, y: -0.6076232, z: 0.4588662, w: 0.5173153}
   m_Size:
-    m_Target: 10.140381
+    m_Target: 0.3852999
     speed: 2
-    m_Value: 10.140381
+    m_Value: 0.40345538
   m_Ortho:
     m_Target: 0
     speed: 2
