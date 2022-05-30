@@ -326,7 +326,7 @@
 -r:"/home/joaopc/2021.3.3f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"/home/joaopc/2021.3.3f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.dll"
 -r:"/home/joaopc/2021.3.3f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/mscorlib.dll"
--r:"/home/joaopc/Documents/BlackOut/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"/media/joaopc/EXTERNO_1TB/00_PUC Minas CC/WorkStation_CC/MyUnity/BlackOut/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEngine.TestRunner.ref.dll"
