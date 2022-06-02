@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     public void selectTower(GameObject tower)
     {
         selectedTower = tower;
+        Debug.Log(tower);
     }
 
     public void updateLife()

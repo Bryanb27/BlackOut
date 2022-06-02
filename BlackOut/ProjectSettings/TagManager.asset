@@ -8,6 +8,8 @@ TagManager:
   - NotBuildable
   - Boost
   - enemie
+  - Torre1
+  - Torre2
   layers:
   - Default
   - TransparentFX

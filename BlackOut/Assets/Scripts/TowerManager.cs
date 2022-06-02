@@ -9,6 +9,8 @@ public class TowerManager : MonoBehaviour
     public GameObject bullet;
     public Transform towerRotation;
     public Collider[] enemies;
+    public static int tower1Cost = 250;
+    public static int tower2Cost = 300;
 
     private void shoot()
     {
